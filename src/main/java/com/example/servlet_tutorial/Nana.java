@@ -26,9 +26,19 @@ public class Nana extends HttpServlet {
         throws ServletException, IOException {
         resp.setCharacterEncoding("UTF-8");
         resp.setContentType("text/html; charset=UTF-8");
+
         PrintWriter out = resp.getWriter();
-        for (int i = 0; i < 10; i++) {
-            out.println(i + ": 안녕 Servlet");
+        String temp = req.getParameter("cnt");
+
+        int count = 10;
+
+        if (temp != null && !temp.equals("")) {
+            count = Integer.parseInt(temp);
+        }
+
+
+        for (int i = 0; i < count; i++) {
+            out.println(i + ": 안녕 Servlet <br />");
         }
     }
 }
