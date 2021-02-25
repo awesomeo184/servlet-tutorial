@@ -22,8 +22,11 @@ public class Hello extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        out.println("hello world!");
+        out.println("hello world! <br />");
+        out.println("안녕하세요");
     }
 }
