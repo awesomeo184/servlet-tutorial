@@ -1,10 +1,12 @@
+package com.example.servlet_tutorial;
+
 import java.io.PrintWriter;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "Hello", value = "/hello")
+@WebServlet(name = "com.example.servlet_tutorial.Hello", value = "/hello")
 public class Hello extends HttpServlet {
 
     @Override
