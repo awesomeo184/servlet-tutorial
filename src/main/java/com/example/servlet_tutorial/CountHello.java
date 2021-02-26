@@ -38,7 +38,7 @@ public class CountHello extends HttpServlet {
         }
 
         for (int i = 0; i < count; i++) {
-            out.println("안녕하세요 < br/>");
+            out.println("안녕하세요.");
         }
 
     }
